@@ -3,40 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나만의 의성 한상차림 만들기</title>
+    <title>제1회 의성장날 천하제일 복숭아 대전</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main id="container">
         <section id="start-page">
-            <h1 class="title">나만의 의성 한상차림</h1>
-            <img src="./img/main.png" alt="의성 한상차림 메인 이미지" class="main-img">
+            <h1 class="title">제1회 의성장날<br>천하제일 복숭아 대전</h1>
             <p class="description">
-                몇 번의 선택으로 당신의 마음을 담은<br>
-                특별한 상차림을 완성하고 의성의 맛을 만나보세요.
+                당신의 10초가 세상을 바꾼다!<br>
+                진영을 선택하고 당신의 복숭아력을 증명하세요!
             </p>
-            <button type="button" class="btn-start" onclick="start()">시작하기</button>
+            <div class="faction-selector">
+                <div class="faction-card soft" onclick="chooseFaction('soft')">
+                    <h2>과즙팡팡 물복파</h2>
+                    <img src="./img/mascot_soft.png" alt="물복파 마스코트">
+                    <button class="btn-select">이 진영으로 참전</button>
+                </div>
+                <div class="faction-card hard" onclick="chooseFaction('hard')">
+                    <h2>아삭단단 딱복군</h2>
+                    <img src="./img/mascot_hard.png" alt="딱복군 마스코트">
+                    <button class="btn-select">이 진영으로 참전</button>
+                </div>
+            </div>
         </section>
 
-        <section id="qna-page">
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
-            <h2 id="question-title" class="question-title">질문</h2>
-            <div id="answer-box" class="answer-box">
+        <section id="game-page">
+            <div class="game-ui">
+                <div class="ui-item">
+                    <span class="ui-label">남은시간</span>
+                    <span id="timer" class="ui-value">10.0</span>
                 </div>
+                <div class="ui-item">
+                    <span class="ui-label">나의 복숭아력</span>
+                    <span id="score" class="ui-value">0</span>
+                </div>
+            </div>
+            <div id="fever-gauge-bar">
+                <div id="fever-gauge"></div>
+            </div>
+            <div id="peach-button-container">
+                <button id="peach-button">🍑</button>
+                <div id="fever-text">FEVER TIME!</div>
+            </div>
         </section>
 
         <section id="result-page">
-            <h2 id="result-title" class="result-title">결과 타이틀</h2>
-            <img id="result-img" src="" alt="결과 이미지" class="result-img">
-            <p id="result-desc" class="result-desc">결과 설명</p>
-            <div class="product-links">
-                <p>👇 이 상차림에 사용된 특산물 👇</p>
-                <div id="product-buttons">
-                    </div>
+            <h2 id="result-rank" class="result-rank">결과 등급</h2>
+            <p class="result-score-text">
+                당신의 복숭아력은 <span id="final-score">0</span>점 입니다!
+            </p>
+            <p id="contribution-text" class="result-desc"></p>
+            
+            <div class="result-buttons">
+                <button class="btn-restart" onclick="restart()">랭킹 1위 재도전!</button>
+                <button class="btn-action" onclick="goToShop()">의성장날 복숭아 구경하기</button>
             </div>
-            <button type="button" class="btn-restart" onclick="restart()">다시하기</button>
         </section>
     </main>
     <script src="script.js"></script>
