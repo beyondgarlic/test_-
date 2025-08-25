@@ -8,6 +8,7 @@ const scoreDisplay = document.querySelector('#score');
 const feverGauge = document.querySelector('#fever-gauge');
 const feverText = document.querySelector('#fever-text');
 const peachButton = document.querySelector('#peach-button');
+const instructionText = document.querySelector('.instruction-text');
 
 const finalScoreDisplay = document.querySelector('#final-score');
 const resultRank = document.querySelector('#result-rank');
@@ -45,6 +46,7 @@ function startGame() {
     feverGauge.style.width = '0%';
     feverText.style.opacity = 0;
     document.body.style.backgroundColor = 'var(--background-color)';
+    instructionText.style.display = 'block'; // 안내 문구 다시 보이게 설정
     
     // 타이머 시작
     timerId = setInterval(updateTimer, 100);
@@ -63,6 +65,11 @@ function updateTimer() {
 // 4. 복숭아 버튼 탭(클릭) 이벤트
 peachButton.addEventListener('click', () => {
     if (timeLeft > 0) {
+        // 첫 탭일 때 안내 문구 숨기기
+        if (score === 0) {
+            instructionText.style.display = 'none';
+        }
+
         // 점수 획득
         score += isFeverTime ? 5 : 1;
         scoreDisplay.innerText = score;
@@ -117,5 +124,5 @@ function restart() {
 
 // 9. 쇼핑몰로 이동 (본인의 쇼핑몰 주소로 변경하세요)
 function goToShop() {
-    window.open('https://www.uiseongmall.co.kr/', '_blank');
+    window.open('https://esmall.cyso.co.kr/shop/list.php?ca_id=es40&mk_id=dlqmsghkwjd');
 }
