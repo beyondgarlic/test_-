@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 의성 한상차림 만들기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="container">
+        <section id="start-page">
+            <h1 class="title">나만의 의성 한상차림</h1>
+            <img src="./img/main.png" alt="의성 한상차림 메인 이미지" class="main-img">
+            <p class="description">
+                몇 번의 선택으로 당신의 마음을 담은<br>
+                특별한 상차림을 완성하고 의성의 맛을 만나보세요.
+            </p>
+            <button type="button" class="btn-start" onclick="start()">시작하기</button>
+        </section>
+
+        <section id="qna-page">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <h2 id="question-title" class="question-title">질문</h2>
+            <div id="answer-box" class="answer-box">
+                </div>
+        </section>
+
+        <section id="result-page">
+            <h2 id="result-title" class="result-title">결과 타이틀</h2>
+            <img id="result-img" src="" alt="결과 이미지" class="result-img">
+            <p id="result-desc" class="result-desc">결과 설명</p>
+            <div class="product-links">
+                <p>👇 이 상차림에 사용된 특산물 👇</p>
+                <div id="product-buttons">
+                    </div>
+            </div>
+            <button type="button" class="btn-restart" onclick="restart()">다시하기</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
