@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Garlic | We Make Uiseong New</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Manrope:wght@400;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-cream: #FDFBF5;
+            --brand-green: #164A41;
+            --brand-yellow: #F1B24A;
+            --brand-red: #D9534F;
+            --text-dark: #212529;
+        }
+        body {
+            font-family: 'Manrope', 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        .font-display { font-family: 'DM Serif Display', serif; }
+        .font-brand { font-family: 'Gasoek One', sans-serif; }
+
+        /* 스크롤 애니메이션 */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1), transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* Marquee Text Animation */
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-display font-bold tracking-wide">BEYOND GARLIC.</a>
+            <a href="#projects" class="bg-black text-white font-bold py-2 px-5 rounded-full text-sm hover:bg-gray-800 transition-colors duration-300">
+                프로젝트 보기
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- #1. Hero Section -->
+        <section class="h-screen min-h-[700px] flex flex-col justify-center items-center text-center relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
+                <h1 class="text-6xl md:text-9xl font-brand text-[var(--brand-green)]">
+                    <div class="reveal">WE MAKE</div>
+                    <div class="reveal" style="transition-delay: 0.1s;">UISEONG</div>
+                    <div class="reveal" style="transition-delay: 0.2s;">NEW<span class="text-[var(--brand-yellow)]">.</span></div>
+                </h1>
+            </div>
+            <p class="absolute bottom-10 text-gray-500 text-sm">Scroll to explore our story</p>
+        </section>
+
+        <!-- #2. Vision & Mission -->
+        <section class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-4xl md:text-6xl font-display reveal">Our Vision & Mission</h2>
+                    <p class="mt-6 text-lg max-w-3xl mx-auto text-gray-600 reveal" style="transition-delay: 0.1s;">
+                        우리는 의성의 모든 이야기가 특별해지는 세상을 꿈꿉니다.<br>
+                        즐거운 시도를 통해 의성의 잠재력을 발견하고, 새로운 세대와 연결하며, 모두에게 영감을 줍니다.
+                    </p>
+                </div>
+                <!-- Infographic Section -->
+                <div class="mt-20 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0 reveal">
+                    <!-- Step 1: Discover -->
+                    <div class="text-center w-60">
+                        <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[var(--brand-red)] text-white text-5xl mx-auto shadow-lg">🔍</div>
+                        <h3 class="font-display text-2xl mt-4">Discover</h3>
+                        <p class="text-gray-500 text-sm">의성의 잠재력 발견</p>
+                    </div>
+                    <!-- Arrow 1 -->
+                    <div class="text-4xl text-gray-300 px-8 transform -rotate-90 md:rotate-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                        </svg>
+                    </div>
+                    <!-- Step 2: Connect -->
+                    <div class="text-center w-60">
+                        <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[var(--brand-yellow)] text-white text-5xl mx-auto shadow-lg">🤝</div>
+                        <h3 class="font-display text-2xl mt-4">Connect</h3>
+                        <p class="text-gray-500 text-sm">새로운 세대와 연결</p>
+                    </div>
+                    <!-- Arrow 2 -->
+                    <div class="text-4xl text-gray-300 px-8 transform -rotate-90 md:rotate-0">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                        </svg>
+                    </div>
+                    <!-- Step 3: Inspire -->
+                    <div class="text-center w-60">
+                        <div class="flex items-center justify-center h-24 w-24 rounded-full bg-[var(--brand-green)] text-white text-5xl mx-auto shadow-lg">💡</div>
+                        <h3 class="font-display text-2xl mt-4">Inspire</h3>
+                        <p class="text-gray-500 text-sm">모두에게 영감</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Marquee Section -->
+        <section class="py-10 bg-black text-white text-4xl md:text-6xl font-brand marquee">
+            <span>UISEONG · LOCAL · CREATIVE · YOUTH · FUN · PROJECT ·</span>
+            <span>UISEONG · LOCAL · CREATIVE · YOUTH · FUN · PROJECT ·</span>
+        </section>
+
+        <!-- #3. Team Section -->
+        <section class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-6xl font-display reveal">Meet the Team</h2>
+                    <p class="mt-4 text-lg max-w-2xl mx-auto text-gray-600 reveal" style="transition-delay: 0.1s;">
+                        우리는 의성을 사랑하는 기획자, 개발자, 디자이너, 분석가입니다.<br>그리고 당신과 함께할 새로운 팀원을 언제나 기다립니다.
+                    </p>
+                </div>
+                <div class="max-w-2xl mx-auto space-y-8">
+                    <!-- 박동현 -->
+                    <div class="flex items-center gap-6 p-4 bg-gray-50 rounded-xl reveal">
+                        <div class="text-6xl">👨‍💼</div>
+                        <div>
+                            <h3 class="font-bold text-lg">박동현 <span class="text-sm text-gray-400 font-normal">PM/PO</span></h3>
+                            <p class="text-sm text-gray-700">국제개발협력(ODA)의 1급 전문가가 되고 싶은 초급 전문가입니다.</p>
+                        </div>
+                    </div>
+                    <!-- 윤가희 -->
+                    <div class="flex items-center gap-6 p-4 bg-gray-50 rounded-xl reveal" style="transition-delay: 0.1s;">
+                        <div class="text-6xl">👩‍💻</div>
+                        <div>
+                            <h3 class="font-bold text-lg">윤가희 <span class="text-sm text-gray-400 font-normal">Frontend Dev</span></h3>
+                            <p class="text-sm text-gray-700">개발을 좋아하는 테크니컬 에디터입니다.</p>
+                        </div>
+                    </div>
+                    <!-- 오경택 -->
+                    <div class="flex items-center gap-6 p-4 bg-gray-50 rounded-xl reveal" style="transition-delay: 0.2s;">
+                        <div class="text-6xl">👨‍💻</div>
+                        <div>
+                            <h3 class="font-bold text-lg">오경택 <span class="text-sm text-gray-400 font-normal">Frontend Dev</span></h3>
+                            <p class="text-sm text-gray-700">백엔드 개발자가 되고싶은 대학생입니다.</p>
+                        </div>
+                    </div>
+                    <!-- 최진수 -->
+                    <div class="flex items-center gap-6 p-4 bg-gray-50 rounded-xl reveal" style="transition-delay: 0.3s;">
+                        <div class="text-6xl">🕵️‍♂️</div>
+                        <div>
+                            <h3 class="font-bold text-lg">최진수 <span class="text-sm text-gray-400 font-normal">Data Analyst</span></h3>
+                            <p class="text-sm text-gray-700">세상의 모든 데이터를 좋아하는 분석가입니다.</p>
+                        </div>
+                    </div>
+                    <!-- 이지혜 -->
+                    <div class="flex items-center gap-6 p-4 bg-gray-50 rounded-xl reveal" style="transition-delay: 0.4s;">
+                        <div class="text-6xl">👩‍🎨</div>
+                        <div>
+                            <h3 class="font-bold text-lg">이지혜 <span class="text-sm text-gray-400 font-normal">Contents Planner</span></h3>
+                            <p class="text-sm text-gray-700">AI 마스터가 되고 싶은 ENFP 콘텐츠 기획자입니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- #4. Projects Section -->
+        <section id="projects" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-6xl font-display reveal">Our Projects</h2>
+                    <p class="mt-4 text-lg max-w-2xl mx-auto text-gray-600 reveal" style="transition-delay: 0.1s;">우리의 고민과 즐거움이 담긴 프로젝트들을 소개합니다.</p>
+                </div>
+                <!-- Project 1 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+                    <div class="reveal">
+                        <img src="https://placehold.co/800x600/F1B24A/FFFFFF?text=의성장날" alt="의성장날 프로젝트" class="rounded-lg shadow-xl">
+                    </div>
+                    <div class="reveal" style="transition-delay: 0.1s;">
+                        <p class="font-bold text-sm text-[var(--brand-yellow)]">PROJECT 01</p>
+                        <h3 class="text-4xl font-display mt-2 mb-4">의성장날 리브랜딩</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            '의성장날'을 단순한 온라인 쇼핑몰이 아닌, Z세대를 위한 콘텐츠 커머스 플랫폼으로 재탄생시켰습니다. 특산물 MBTI 테스트를 통해 의성의 농산물을 새롭고 재미있는 방식으로 경험하게 했습니다.
+                        </p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                     <div class="reveal md:order-2">
+                        <img src="https://placehold.co/800x600/D9534F/FFFFFF?text=캐릭터" alt="특산물 캐릭터" class="rounded-lg shadow-xl">
+                    </div>
+                    <div class="reveal md:order-1" style="transition-delay: 0.1s;">
+                        <p class="font-bold text-sm text-[var(--brand-red)]">PROJECT 02</p>
+                        <h3 class="text-4xl font-display mt-2 mb-4">특산물 캐릭터 제작</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            의성의 마늘, 자두, 사과가 살아있는 캐릭터로 다시 태어났습니다. 각 특산물의 특징을 살린 16가지의 개성 넘치는 캐릭터를 통해, 소비자들에게 더 친근하고 매력적으로 다가갑니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 bg-black text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-display">Let's Talk!</h2>
+            <p class="mt-4 text-gray-400">의성의 다음 이야기를 함께 만들고 싶다면, 언제든 연락주세요.</p>
+            <div class="mt-8">
+                <a href="mailto:hello@beyondgarlic.com" class="bg-[var(--brand-yellow)] text-black font-bold py-3 px-8 rounded-full hover:brightness-110 transition-all duration-300">
+                    hello@beyondgarlic.com
+                </a>
+            </div>
+            <div class="mt-12 text-sm text-gray-500">
+                <p>&copy; 2025 BEYOND GARLIC. A creative collective for Uiseong.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
