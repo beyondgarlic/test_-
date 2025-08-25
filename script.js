@@ -110,10 +110,10 @@ function endGame() {
 
 // 7. 점수에 따른 등급(칭호) 반환
 function getResultRank(score) {
-    if (score <= 50) return "🍑 복숭아 병아리 🍑";
-    if (score <= 100) return "💪 복숭아 하수 💪";
-    if (score <= 150) return "🔥 복숭아 고수 🔥";
-    return "👑 인간 복숭아 👑";
+    if (score <= 50) return "복숭아 병아리";
+    if (score <= 100) return "복숭아 하수";
+    if (score <= 150) return "복숭아 고수";
+    return "인간 복숭아";
 }
 
 // 8. 다시 시작
@@ -124,5 +124,5 @@ function restart() {
 
 // 9. 쇼핑몰로 이동 (본인의 쇼핑몰 주소로 변경하세요)
 function goToShop() {
-    window.open('https://esmall.cyso.co.kr/shop/list.php?ca_id=es40&mk_id=dlqmsghkwjd');
+    window.open('https://esmall.cyso.co.kr/shop/list.php?ca_id=es4040');
 }
