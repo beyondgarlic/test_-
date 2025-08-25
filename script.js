@@ -35,8 +35,8 @@ const resultData = {
         img: './img/result_family.png',
         desc: '의성의 건강한 재료들로 차려낸 정성 가득 한상입니다. 흑마늘 보쌈과 신선한 사과가 어우러져 온 가족의 입맛과 건강을 모두 사로잡을 거예요.',
         products: [
-            { name: '의성 흑마늘 구매하기', link: 'https://shopping.naver.com/home' },
-            { name: '의성 명품 사과 구매하기', link: 'https://shopping.naver.com/home' }
+            { name: '의성 흑마늘 구매하기', link: 'https://esmall.cyso.co.kr/' },
+            { name: '의성 명품 사과 구매하기', link: 'https://esmall.cyso.co.kr/' }
         ]
     },
     couple: {
@@ -44,8 +44,8 @@ const resultData = {
         img: './img/result_couple.png',
         desc: '사랑하는 사람과 함께하는 특별한 순간. 매콤달콤한 찜닭과 새콤한 자두가 어우러져 잊지 못할 저녁을 선사할 거예요.',
         products: [
-            { name: '의성 고춧가루 구매하기', link: 'https://shopping.naver.com/home' },
-            { name: '의성 자두 구매하기', link: 'https://shopping.naver.com/home' }
+            { name: '의성 고춧가루 구매하기', link: 'https://esmall.cyso.co.kr/' },
+            { name: '의성 자두 구매하기', link: 'https://esmall.cyso.co.kr/' }
         ]
     },
     friends: {
@@ -53,8 +53,8 @@ const resultData = {
         img: './img/result_friends.png',
         desc: '친구들과의 즐거운 파티에 맛이 빠질 수 없죠! 모두가 좋아할 흑마늘 보쌈과 상큼한 자두 디저트로 파티 분위기를 한껏 끌어올려 보세요.',
         products: [
-            { name: '의성 흑마늘 구매하기', link: 'https://shopping.naver.com/home' },
-            { name: '의성 자두 구매하기', link: 'https://shopping.naver.com/home' }
+            { name: '의성 흑마늘 구매하기', link: 'https://esmall.cyso.co.kr/' },
+            { name: '의성 자두 구매하기', link: 'https://esmall.cyso.co.kr/' }
         ]
     }
 };
