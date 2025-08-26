@@ -46,7 +46,7 @@
             animation: marquee-goods 30s linear infinite;
         }
         .goods-marquee-track img {
-            height: 320px; /* 96 * 0.25rem = 384px -> 320px for better view */
+            height: 320px;
             width: auto;
             padding: 0 1rem; /* 16px */
             flex-shrink: 0;
@@ -64,7 +64,7 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-xl font-display font-bold tracking-wide">BEYOND GARLIC.</a>
             <a href="index.html#projects" class="bg-black text-white font-bold py-2 px-5 rounded-full text-sm hover:bg-gray-800 transition-colors duration-300">
-                모든 프로젝트 보기
+                retrospective
             </a>
         </div>
     </header>
@@ -78,6 +78,21 @@
                 <p class="mt-6 text-lg max-w-2xl mx-auto text-gray-600 reveal" style="transition-delay: 0.2s;">
                     '농산물'이라는 단어가 주는 딱딱한 이미지를 벗어나, Z세대에게 더 친근하고 매력적으로 다가가기 위해 의성의 대표 특산물들에 각자의 개성과 스토리를 부여하는 캐릭터라이징 프로젝트를 진행했습니다.
                 </p>
+            </div>
+        </section>
+
+        <!-- Worldview Section -->
+        <section class="py-20 md:py-24">
+             <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-4xl md:text-5xl font-display reveal">🌍 의성 푸드킹덤 세계관</h2>
+                    <p class="mt-8 text-lg max-w-3xl mx-auto text-gray-600 leading-relaxed reveal" style="transition-delay: 0.1s;">
+                        경상북도 의성군 한복판, 사람들의 눈에는 보이지 않는 비밀 왕국이 존재한다.
+                        <br><br>
+                        이곳은 바로 푸드킹덤 — 마늘, 흑마늘, 사과, 고추, 복숭아, 자두, 쌀 등 의성 특산물이 살아 움직이며 자신들의 개성과 MBTI 성격을 지닌 채 모여 사는 마법 같은 세계다.
+                        푸드킹덤은 의성장날이라는 전통 축제를 중심으로 번영하며, 각 캐릭터들은 왕국을 발전시키거나 서로 갈등·협력하며 이야기를 이어간다.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -224,35 +239,35 @@
                         <div class="goods-marquee h-96 bg-white rounded-lg shadow-xl flex items-center">
                             <div class="goods-marquee-track">
                                 <!-- NOTE: img/ 경로에 실제 굿즈 이미지를 넣어주세요. -->
-                                <img src="img/rice_figure.png" alt="Goods Sticker">
-                                <img src="img/rice_doll.png" alt="Goods Sticker">
                                 <img src="img/garlic_figure.png" alt="Goods Sticker">
                                 <img src="img/garlic_doll.png" alt="Goods Sticker">
-                                <img src="img/plum_figure.png" alt="Goods Sticker">
-                                <img src="img/plum_doll.png" alt="Goods Sticker">
-                                <img src="img/apple_figure.png" alt="Goods Sticker">
-                                <img src="img/apple_doll.png" alt="Goods Sticker">
-                                <img src="img/pepper_figure.png" alt="Goods Sticker">
-                                <img src="img/pepper_doll.png" alt="Goods Sticker">
-                                <img src="img/peach_figure.png" alt="Goods Sticker">
-                                <img src="img/peach_doll.png" alt="Goods Sticker">
-                                <img src="img/black_figure.png" alt="Goods Sticker">
-                                <img src="img/black_doll.png" alt="Goods Sticker">    
-                                <!-- Duplicate for seamless loop -->
-                                <img src="img/rice_figure.png" alt="Goods Sticker">
-                                <img src="img/rice_doll.png" alt="Goods Sticker">
-                                <img src="img/garlic_figure.png" alt="Goods Sticker">
-                                <img src="img/garlic_doll.png" alt="Goods Sticker">
-                                <img src="img/plum_figure.png" alt="Goods Sticker">
-                                <img src="img/plum_doll.png" alt="Goods Sticker">
-                                <img src="img/apple_figure.png" alt="Goods Sticker">
-                                <img src="img/apple_doll.png" alt="Goods Sticker">
-                                <img src="img/pepper_figure.png" alt="Goods Sticker">
-                                <img src="img/pepper_doll.png" alt="Goods Sticker">
-                                <img src="img/peach_figure.png" alt="Goods Sticker">
-                                <img src="img/peach_doll.png" alt="Goods Sticker">
                                 <img src="img/black_figure.png" alt="Goods Sticker">
                                 <img src="img/black_doll.png" alt="Goods Sticker">
+                                <img src="img/rice_figure.png" alt="Goods Sticker">
+                                <img src="img/rice_doll.png" alt="Goods Sticker">
+                                <img src="img/plum_figure.png" alt="Goods Sticker">
+                                <img src="img/plum_doll.png" alt="Goods Sticker">
+                                <img src="img/apple_figure.png" alt="Goods Sticker">
+                                <img src="img/apple_doll.png" alt="Goods Sticker">
+                                <img src="img/pepper_figure.png" alt="Goods Sticker">
+                                <img src="img/pepper_doll.png" alt="Goods Sticker">
+                                <img src="img/peach_figure.png" alt="Goods Sticker">
+                                <img src="img/peach_doll.png" alt="Goods Sticker">  
+                                <!-- Duplicate for seamless loop -->
+                                <img src="img/garlic_figure.png" alt="Goods Sticker">
+                                <img src="img/garlic_doll.png" alt="Goods Sticker">
+                                <img src="img/black_figure.png" alt="Goods Sticker">
+                                <img src="img/black_doll.png" alt="Goods Sticker">
+                                <img src="img/rice_figure.png" alt="Goods Sticker">
+                                <img src="img/rice_doll.png" alt="Goods Sticker">
+                                <img src="img/plum_figure.png" alt="Goods Sticker">
+                                <img src="img/plum_doll.png" alt="Goods Sticker">
+                                <img src="img/apple_figure.png" alt="Goods Sticker">
+                                <img src="img/apple_doll.png" alt="Goods Sticker">
+                                <img src="img/pepper_figure.png" alt="Goods Sticker">
+                                <img src="img/pepper_doll.png" alt="Goods Sticker">
+                                <img src="img/peach_figure.png" alt="Goods Sticker">
+                                <img src="img/peach_doll.png" alt="Goods Sticker">  
                             </div>
                         </div>
                         <h3 class="text-2xl font-display mt-6">공식 굿즈</h3>
