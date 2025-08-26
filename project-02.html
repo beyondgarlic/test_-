@@ -34,6 +34,27 @@
             transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1), transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
         .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* Goods Marquee Animation */
+        .goods-marquee {
+            overflow: hidden;
+            position: relative;
+        }
+        .goods-marquee-track {
+            display: flex;
+            width: fit-content;
+            animation: marquee-goods 30s linear infinite;
+        }
+        .goods-marquee-track img {
+            height: 320px; /* 96 * 0.25rem = 384px -> 320px for better view */
+            width: auto;
+            padding: 0 1rem; /* 16px */
+            flex-shrink: 0;
+        }
+        @keyframes marquee-goods {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
     </style>
 </head>
 <body>
@@ -55,7 +76,7 @@
                 <p class="font-bold text-sm text-[var(--brand-red)] reveal">PROJECT 02</p>
                 <h1 class="text-4xl md:text-7xl font-display mt-4 reveal" style="transition-delay: 0.1s;">의성 특산품에<br>생명을 불어넣다</h1>
                 <p class="mt-6 text-lg max-w-2xl mx-auto text-gray-600 reveal" style="transition-delay: 0.2s;">
-                    '농산물'이라는 단어가 주는 딱딱한 이미지를 벗어나, MZ세대에게 더 친근하고 매력적으로 다가가기 위해 의성의 대표 특산물들에 각자의 개성과 스토리를 부여하는 캐릭터라이징 프로젝트를 진행했습니다.
+                    '농산물'이라는 단어가 주는 딱딱한 이미지를 벗어나, Z세대에게 더 친근하고 매력적으로 다가가기 위해 의성의 대표 특산물들에 각자의 개성과 스토리를 부여하는 캐릭터라이징 프로젝트를 진행했습니다.
                 </p>
             </div>
         </section>
@@ -67,120 +88,119 @@
                     <h2 class="text-4xl md:text-5xl font-display reveal">The Uiseong Friends</h2>
                     <p class="mt-4 text-lg max-w-2xl mx-auto text-gray-600 reveal" style="transition-delay: 0.1s;">당신의 MBTI와 꼭 맞는 의성의 새로운 친구들을 소개합니다.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     <!-- Character 1: 갈리노 -->
                     <div class="bg-gray-50 p-6 rounded-lg text-center reveal">
-                        <img src="img/ENTJ.jpg" alt="갈릭킹 (ENTJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ENTJ';">
+                        <img src="img/ENTJ.jpg" alt="마늘 왕 '갈리노' (ENTJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ENTJ';">
                         <h3 class="text-2xl font-display">마늘 왕 '갈리노'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">ENTJ</p>
                         <p class="mt-3 text-sm text-gray-600">카리스마 넘치는 리더, 의성 왕국의 왕</p>
                     </div>
                     <!-- Character 2: 리쿠 -->
-                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.1s;">
-                        <img src="img/ESTJ.jpg" alt="플럼피 (ENFP)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ESTJ';">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.05s;">
+                        <img src="img/ESTJ.jpg" alt="직장인 마늘 '리쿠' (ESTJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ESTJ';">
                         <h3 class="text-2xl font-display">직장인 마늘 '리쿠'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">ESTJ</p>
                         <p class="mt-3 text-sm text-gray-600">원칙적이고 철저한 성실가</p>
                     </div>
                     <!-- Character 3: 마니 -->
-                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.2s;">
-                        <img src="img/ISTJ.jpg" alt="애플 박사 (INTJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ISTJ';">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.1s;">
+                        <img src="img/ISTJ.jpg" alt="과학자 마늘 '마니' (ISTJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ISTJ';">
                         <h3 class="text-2xl font-display">과학자 마늘 '마니'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">ISTJ</p>
                         <p class="mt-3 text-sm text-gray-600">분석적이고 신중한 연구자</p>
                     </div>
                     <!-- Character 4: 블라키 -->
-                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.3s;">
-                        <img src="img/ENFJ.jpg" alt="블랙 가이 (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ENFJ';">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.15s;">
+                        <img src="img/ENFJ.jpg" alt="현자 흑마늘 '블라키' (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ENFJ';">
                         <h3 class="text-2xl font-display">현자 흑마늘 '블라키'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">ENFJ</p>
                         <p class="mt-3 text-sm text-gray-600">따뜻한 카리스마, 지혜로운 멘토</p>
                     </div>
                      <!-- Character 5: 소루 -->
-                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.3s;">
-                        <img src="img/INFJ.jpg" alt="블랙 가이 (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=INFJ';">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.2s;">
+                        <img src="img/INFJ.jpg" alt="수도승 흑마늘 '소루' (INFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=INFJ';">
                         <h3 class="text-2xl font-display">수도승 흑마늘 '소루'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">INFJ</p>
                         <p class="mt-3 text-sm text-gray-600">명상과 평화를 사랑하는 영적 지도자</p>
                     </div>
                      <!-- Character 6: 디모 -->
-                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.3s;">
-                        <img src="img/INTP.jpg" alt="블랙 가이 (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=INTP';">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.25s;">
+                        <img src="img/INTP.jpg" alt="학자 흑마늘 '디모' (INTP)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=INTP';">
                         <h3 class="text-2xl font-display">학자 흑마늘 '디모'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">INTP</p>
                         <p class="mt-3 text-sm text-gray-600">탐구심과 상상력이 풍부한 학자</p>
                     </div>
                      <!-- Character 7: 아포 -->
                     <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.3s;">
-                        <img src="img/INTJ.jpg" alt="블랙 가이 (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=INTJ';">
+                        <img src="img/INTJ.jpg" alt="전략가 사과 '아포' (INTJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=INTJ';">
                         <h3 class="text-2xl font-display">전략가 사과 '아포'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">INTJ</p>
                         <p class="mt-3 text-sm text-gray-600">철저한 계획과 분석의 마스터</p>
                     </div>
                      <!-- Character 8: 아토르 -->
-                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.3s;">
-                        <img src="img/ISFP.jpg" alt="블랙 가이 (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ISFP';">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.35s;">
+                        <img src="img/ISFP.jpg" alt="예술가 사과 '아토르' (ISFP)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ISFP';">
                         <h3 class="text-2xl font-display">예술가 사과 '아토르'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">ISFP</p>
                         <p class="mt-3 text-sm text-gray-600">자유롭고 창의적인 감성 화가</p>
                     </div>
                      <!-- Character 9: 피코 -->
-                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.3s;">
-                        <img src="img/ESTP.jpg" alt="블랙 가이 (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ESTP';">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.4s;">
+                        <img src="img/ESTP.jpg" alt="사업가 고추 '피코' (ESTP)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ESTP';">
                         <h3 class="text-2xl font-display">사업가 고추 '피코'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">ESTP</p>
                         <p class="mt-3 text-sm text-gray-600">에너지 넘치고 돌진하는 행동파</p>
                     </div>
                      <!-- Character 10: 초리 -->
-                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.3s;">
-                        <img src="img/ESFP.jpg" alt="블랙 가이 (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ESFP';">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.45s;">
+                        <img src="img/ESFP.jpg" alt="모험가 고추 '초리' (ESFP)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ESFP';">
                         <h3 class="text-2xl font-display">모험가 고추 '초리'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">ESFP</p>
                         <p class="mt-3 text-sm text-gray-600">밝고 활발한 분위기 메이커</p>
                     </div>
                      <!-- Character 11: 라미 -->
-                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.3s;">
-                        <img src="img/ESFJ.jpg" alt="블랙 가이 (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ESFJ';">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.5s;">
+                        <img src="img/ESFJ.jpg" alt="따뜻한 쌀 '라미' (ESFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ESFJ';">
                         <h3 class="text-2xl font-display">따뜻한 쌀 '라미'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">ESFJ</p>
                         <p class="mt-3 text-sm text-gray-600">모두를 챙기는 보살핌형</p>
                     </div>
                      <!-- Character 12: 라이시 -->
-                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.3s;">
-                        <img src="img/ISFJ.jpg" alt="블랙 가이 (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ISFJ';">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.55s;">
+                        <img src="img/ISFJ.jpg" alt="든든한 쌀 '라이시' (ISFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ISFJ';">
                         <h3 class="text-2xl font-display">든든한 쌀 '라이시'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">ISFJ</p>
                         <p class="mt-3 text-sm text-gray-600">묵묵히 지켜주는 든든한 버팀목</p>
                     </div>
                      <!-- Character 13: 스파크 -->
-                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.3s;">
-                        <img src="img/ENTP.jpg" alt="블랙 가이 (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ENTP';">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.6s;">
+                        <img src="img/ENTP.jpg" alt="아이디어 자두 '스파크' (ENTP)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ENTP';">
                         <h3 class="text-2xl font-display">아이디어 자두 '스파크'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">ENTP</p>
                         <p class="mt-3 text-sm text-gray-600">재치있고 창의적인 아이디어 뱅크</p>
                     </div>
                      <!-- Character 14: 플루 -->
-                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.3s;">
-                        <img src="img/INFP.jpg" alt="블랙 가이 (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=INFP';">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.65s;">
+                        <img src="img/INFP.jpg" alt="감성 자두 '플루' (INFP)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=INFP';">
                         <h3 class="text-2xl font-display">감성 자두 '플루'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">INFP</p>
-                        <p class="mt-3 text-sm text-gray-600">따뜻하고 이해심 깊은 강성파</p>
+                        <p class="mt-3 text-sm text-gray-600">따뜻하고 이해심 깊은 감성파</p>
                     </div>
                      <!-- Character 15: 피치라 -->
-                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.3s;">
-                        <img src="img/ENFP.jpg" alt="블랙 가이 (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ENFP';">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.7s;">
+                        <img src="img/ENFP.jpg" alt="말랑 복숭아 '피치라' (ENFP)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ENFP';">
                         <h3 class="text-2xl font-display">말랑 복숭아 '피치라'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">ENFP</p>
                         <p class="mt-3 text-sm text-gray-600">즐겁고 긍정적인 에너지 전도사</p>
                     </div>
-                     <!-- Character 16: 블라키 -->
-                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.3s;">
-                        <img src="img/ESFP.jpg" alt="블랙 가이 (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ESFP';">
+                     <!-- Character 16: 피치핑 -->
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.75s;">
+                        <img src="img/ESFP.jpg" alt="천사 복숭아 '피치핑' (ESFP)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ESFP';">
                         <h3 class="text-2xl font-display">천사 복숭아 '피치핑'</h3>
                         <p class="font-bold text-sm text-gray-500 mt-1">ESFP</p>
                         <p class="mt-3 text-sm text-gray-600">순수하고 사랑스러운 러블리 캐릭터</p>
                     </div>
-                    
                 </div>
             </div>
         </section>
@@ -200,23 +220,39 @@
                         <p class="mt-2 text-gray-600">캐릭터들의 세계관을 바탕으로 한 웹툰을 통해 의성 특산물의 숨겨진 이야기를 재미있게 전달하고, 독자들과 새로운 방식으로 소통합니다.</p>
                     </div>
                     <!-- Goods -->
-                    <!-- Goods -->
-                    <div class="reveal" style="transition-delay: 3s;">
-                        <div id="goods-slider" class="relative w-full h-96 overflow-hidden rounded-lg shadow-xl bg-white">
-                            <div id="goods-track" class="flex h-full transition-transform duration-1000 ease-in-out">
-                                <!-- Slides -->
-                                <div class="w-full flex-shrink-0 h-full p-8 flex justify-center items-center">
-                                    <img src="img/rice_figure.png" alt="Goods Sticker" class="max-h-full max-w-full">
-                                </div>
-                                <div class="w-full flex-shrink-0 h-full p-8 flex justify-center items-center">
-                                    <img src="img/rice_doll.png" alt="Goods Keyring" class="max-h-full max-w-full">
-                                </div>
-                                <div class="w-full flex-shrink-0 h-full p-8 flex justify-center items-center">
-                                    <img src="img/garlic_doll.png" alt="Goods Mug" class="max-h-full max-w-full">
-                                </div>
-                                <div class="w-full flex-shrink-0 h-full p-8 flex justify-center items-center">
-                                    <img src="img/garlic_figure.png" alt="Goods Phonecase" class="max-h-full max-w-full">
-                                </div>
+                    <div class="reveal" style="transition-delay: 0.15s;">
+                        <div class="goods-marquee h-96 bg-white rounded-lg shadow-xl flex items-center">
+                            <div class="goods-marquee-track">
+                                <!-- NOTE: img/ 경로에 실제 굿즈 이미지를 넣어주세요. -->
+                                <img src="img/rice_figure" alt="Goods Sticker">
+                                <img src="img/rice_doll" alt="Goods Sticker">
+                                <img src="img/garlic_figure" alt="Goods Sticker">
+                                <img src="img/garlic_doll" alt="Goods Sticker">
+                                <img src="img/plum_figure" alt="Goods Sticker">
+                                <img src="img/plum_doll" alt="Goods Sticker">
+                                <img src="img/apple_figure" alt="Goods Sticker">
+                                <img src="img/apple_doll" alt="Goods Sticker">
+                                <img src="img/pepper_figure" alt="Goods Sticker">
+                                <img src="img/pepper_doll" alt="Goods Sticker">
+                                <img src="img/peach_figure" alt="Goods Sticker">
+                                <img src="img/peach_doll" alt="Goods Sticker">
+                                <img src="img/black_figure" alt="Goods Sticker">
+                                <img src="img/black_doll" alt="Goods Sticker">    
+                                <!-- Duplicate for seamless loop -->
+                                <img src="img/rice_figure" alt="Goods Sticker">
+                                <img src="img/rice_doll" alt="Goods Sticker">
+                                <img src="img/garlic_figure" alt="Goods Sticker">
+                                <img src="img/garlic_doll" alt="Goods Sticker">
+                                <img src="img/plum_figure" alt="Goods Sticker">
+                                <img src="img/plum_doll" alt="Goods Sticker">
+                                <img src="img/apple_figure" alt="Goods Sticker">
+                                <img src="img/apple_doll" alt="Goods Sticker">
+                                <img src="img/pepper_figure" alt="Goods Sticker">
+                                <img src="img/pepper_doll" alt="Goods Sticker">
+                                <img src="img/peach_figure" alt="Goods Sticker">
+                                <img src="img/peach_doll" alt="Goods Sticker">
+                                <img src="img/black_figure" alt="Goods Sticker">
+                                <img src="img/black_doll" alt="Goods Sticker">
                             </div>
                         </div>
                         <h3 class="text-2xl font-display mt-6">공식 굿즈</h3>
@@ -244,6 +280,7 @@
     </footer>
 
     <script>
+        // Reveal on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -254,25 +291,6 @@
 
         document.querySelectorAll('.reveal').forEach(el => {
             observer.observe(el);
-        });
-        
-    // Goods Slider Logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const track = document.getElementById('goods-track');
-            if (track) {
-                const slides = track.children;
-                const slideCount = slides.length;
-
-                if (slideCount > 0) {
-                    let currentIndex = 0;
-                    track.style.width = `${slideCount * 100}%`;
-
-                    setInterval(() => {
-                        currentIndex = (currentIndex + 1) % slideCount;
-                        track.style.transform = `translateX(-${(100 / slideCount) * currentIndex}%)`;
-                    }, 3000);
-                }
-            }
         });
     </script>
 </body>
