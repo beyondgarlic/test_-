@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 02: 특산물 캐릭터 제작 | Beyond Garlic</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Manrope:wght@400;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-cream: #FDFBF5;
+            --brand-green: #164A41;
+            --brand-yellow: #F1B24A;
+            --brand-red: #D9534F;
+            --text-dark: #212529;
+        }
+        body {
+            font-family: 'Manrope', 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        .font-display { font-family: 'DM Serif Display', serif; }
+        .font-brand { font-family: 'Gasoek One', sans-serif; }
+
+        /* 스크롤 애니메이션 */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1), transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="sticky top-0 left-0 right-0 z-50 bg-[var(--bg-cream)]/80 backdrop-blur-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-display font-bold tracking-wide">BEYOND GARLIC.</a>
+            <a href="index.html#projects" class="bg-black text-white font-bold py-2 px-5 rounded-full text-sm hover:bg-gray-800 transition-colors duration-300">
+                모든 프로젝트 보기
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Project Hero Section -->
+        <section class="py-20 md:py-32 text-center">
+            <div class="container mx-auto px-6">
+                <p class="font-bold text-sm text-[var(--brand-red)] reveal">PROJECT 02</p>
+                <h1 class="text-4xl md:text-7xl font-display mt-4 reveal" style="transition-delay: 0.1s;">의성 특산품에<br>생명을 불어넣다</h1>
+                <p class="mt-6 text-lg max-w-2xl mx-auto text-gray-600 reveal" style="transition-delay: 0.2s;">
+                    '농산물'이라는 단어가 주는 딱딱한 이미지를 벗어나, Z세대에게 더 친근하고 매력적으로 다가가기 위해 의성의 대표 특산물들에 각자의 개성과 스토리를 부여하는 캐릭터라이징 프로젝트를 진행했습니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Character Showcase Section -->
+        <section class="py-20 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-display reveal">The Uiseong Friends</h2>
+                    <p class="mt-4 text-lg max-w-2xl mx-auto text-gray-600 reveal" style="transition-delay: 0.1s;">당신의 MBTI와 꼭 맞는 의성의 새로운 친구들을 소개합니다.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Character 1: 갈릭킹 -->
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal">
+                        <img src="images/ENTJ.png" alt="갈릭킹 (ENTJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ENTJ';">
+                        <h3 class="text-2xl font-display">마늘 장군 '갈릭킹'</h3>
+                        <p class="font-bold text-sm text-gray-500 mt-1">ENTJ</p>
+                        <p class="mt-3 text-sm text-gray-600">강인한 카리스마로 의성 특산물 세계를 이끄는 리더. 겉은 단단하지만 속은 깊어 조직의 맛을 책임집니다.</p>
+                    </div>
+                    <!-- Character 2: 플럼피 -->
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.1s;">
+                        <img src="images/ENFP.png" alt="플럼피 (ENFP)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ENFP';">
+                        <h3 class="text-2xl font-display">상큼 발랄 '플럼피'</h3>
+                        <p class="font-bold text-sm text-gray-500 mt-1">ENFP</p>
+                        <p class="mt-3 text-sm text-gray-600">넘치는 에너지와 밝은 매력으로 주변을 즐겁게 만드는 분위기 메이커. 달콤함으로 모두의 마음을 사로잡습니다.</p>
+                    </div>
+                    <!-- Character 3: 애플 박사 -->
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.2s;">
+                        <img src="images/INTJ.png" alt="애플 박사 (INTJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=INTJ';">
+                        <h3 class="text-2xl font-display">원칙주의자 '애플 박사'</h3>
+                        <p class="font-bold text-sm text-gray-500 mt-1">INTJ</p>
+                        <p class="mt-3 text-sm text-gray-600">깨끗하고 반듯한 모양처럼 정직하고 꼼꼼합니다. 한 치의 오차도 없이 완벽한 맛의 황금 비율을 연구합니다.</p>
+                    </div>
+                    <!-- Character 4: 블랙 가이 -->
+                    <div class="bg-gray-50 p-6 rounded-lg text-center reveal" style="transition-delay: 0.3s;">
+                        <img src="images/ENFJ.png" alt="블랙 가이 (ENFJ)" class="w-full h-64 object-contain mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/FFFFFF?text=ENFJ';">
+                        <h3 class="text-2xl font-display">흑마늘 멘토 '블랙 가이'</h3>
+                        <p class="font-bold text-sm text-gray-500 mt-1">ENFJ</p>
+                        <p class="mt-3 text-sm text-gray-600">통찰력이 뛰어난 멘토. 숙성을 거친 독특한 깊은 맛처럼, 시간이 지날수록 그의 진가가 드러납니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Character Utilization Section -->
+        <section class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-display reveal">Beyond the Characters</h2>
+                    <p class="mt-4 text-lg max-w-2xl mx-auto text-gray-600 reveal" style="transition-delay: 0.1s;">캐릭터는 단순한 그림을 넘어, 의성의 이야기를 전달하는 새로운 미디어가 됩니다.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Webtoon -->
+                    <div class="reveal">
+                        <img src="https://placehold.co/800x600/164A41/FFFFFF?text=WEBTOON" alt="의성 프렌즈 웹툰" class="rounded-lg shadow-xl mb-6">
+                        <h3 class="text-2xl font-display">웹툰: 의성 프렌즈의 하루</h3>
+                        <p class="mt-2 text-gray-600">캐릭터들의 세계관을 바탕으로 한 웹툰을 통해 의성 특산물의 숨겨진 이야기를 재미있게 전달하고, 독자들과 새로운 방식으로 소통합니다.</p>
+                    </div>
+                    <!-- Goods -->
+                    <div class="reveal" style="transition-delay: 0.15s;">
+                        <img src="https://placehold.co/800x600/D9534F/FFFFFF?text=GOODS" alt="의성 프렌즈 굿즈" class="rounded-lg shadow-xl mb-6">
+                        <h3 class="text-2xl font-display">공식 굿즈</h3>
+                        <p class="mt-2 text-gray-600">스티커, 키링, 머그컵 등 일상에서 만날 수 있는 다양한 굿즈를 통해 캐릭터에 대한 애정을 높이고, 의성 브랜드를 더 널리 알립니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 bg-black text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-display">Let's Talk!</h2>
+            <p class="mt-4 text-gray-400">의성의 다음 이야기를 함께 만들고 싶다면, 언제든 연락주세요.</p>
+            <div class="mt-8">
+                <a href="mailto:hello@beyondgarlic.com" class="bg-[var(--brand-yellow)] text-black font-bold py-3 px-8 rounded-full hover:brightness-110 transition-all duration-300">
+                    hello@beyondgarlic.com
+                </a>
+            </div>
+            <div class="mt-12 text-sm text-gray-500">
+                <p>&copy; 2025 BEYOND GARLIC. A creative collective for Uiseong.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
