@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrospective | Beyond Garlic</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Manrope:wght@400;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-cream: #FDFBF5;
+            --brand-green: #164A41;
+            --brand-yellow: #F1B24A;
+            --brand-red: #D9534F;
+            --text-dark: #212529;
+        }
+        body {
+            font-family: 'Manrope', 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        .font-display { font-family: 'DM Serif Display', serif; }
+        .font-brand { font-family: 'Gasoek One', sans-serif; }
+
+        /* 스크롤 애니메이션 */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1), transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="sticky top-0 left-0 right-0 z-50 bg-[var(--bg-cream)]/80 backdrop-blur-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-display font-bold tracking-wide">BEYOND GARLIC.</a>
+            <a href="index.html#projects" class="bg-black text-white font-bold py-2 px-5 rounded-full text-sm hover:bg-gray-800 transition-colors duration-300">
+                프로젝트 보기
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 md:py-32 text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-7xl font-display mt-4 reveal">Our Story, <br>Our Thoughts</h1>
+                <p class="mt-6 text-lg max-w-2xl mx-auto text-gray-600 reveal" style="transition-delay: 0.1s;">
+                    'Beyond Garlic' 프로젝트를 통해 우리는 무엇을 배우고 느꼈을까요?<br>지역의 새로운 가치를 만들기 위해 모인 우리들의 진솔한 회고를 나눕니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Retrospective Section -->
+        <section class="py-20 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="space-y-16">
+                    <!-- 박동현 -->
+                    <div class="md:flex items-start gap-12 reveal">
+                        <div class="flex-shrink-0 md:w-1/4 text-center md:text-left mb-6 md:mb-0">
+                            <div class="text-7xl">👨‍💼</div>
+                            <h3 class="font-bold text-2xl mt-4">박동현</h3>
+                            <p class="text-gray-500">PM/PO</p>
+                        </div>
+                        <div class="border-t-2 md:border-t-0 md:border-l-2 border-gray-200 pt-6 md:pt-0 md:pl-12">
+                            <p class="text-2xl font-display text-gray-800 leading-relaxed">"기술과 지역의 가치를 연결하는 값진 경험이었습니다."</p>
+                            <p class="mt-4 text-gray-600 leading-relaxed">이번 프로젝트는 단순한 개발을 넘어, 지역의 가치를 어떻게 기술과 연결할 수 있는지 깊이 고민하는 시간이었습니다. 팀원들과 함께 의성의 새로운 가능성을 발견하고, 아이디어를 현실로 만들어가는 모든 과정이 즐거웠습니다. 우리의 작은 시도가 긍정적인 변화의 씨앗이 되기를 바랍니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- 윤가희 -->
+                    <div class="md:flex items-start gap-12 reveal">
+                        <div class="flex-shrink-0 md:w-1/4 text-center md:text-left mb-6 md:mb-0">
+                            <div class="text-7xl">👩‍💻</div>
+                            <h3 class="font-bold text-2xl mt-4">윤가희</h3>
+                            <p class="text-gray-500">Frontend Dev</p>
+                        </div>
+                        <div class="border-t-2 md:border-t-0 md:border-l-2 border-gray-200 pt-6 md:pt-0 md:pl-12">
+                            <p class="text-2xl font-display text-gray-800 leading-relaxed">"사용자에게 즐거움을 주는 코드를 통해 보람을 느꼈습니다."</p>
+                            <p class="mt-4 text-gray-600 leading-relaxed">사용자에게 즐거운 경험을 선사하는 코드를 짜는 과정이 정말 즐거웠습니다. 특히 MBTI 테스트 결과에 따라 각기 다른 캐릭터가 나타날 때 사용자들이 기뻐하는 모습을 상상하며 코딩했습니다. 제 코드가 지역에 긍정적인 영향을 줄 수 있다는 사실에 큰 보람을 느낍니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- 오경택 -->
+                    <div class="md:flex items-start gap-12 reveal">
+                        <div class="flex-shrink-0 md:w-1/4 text-center md:text-left mb-6 md:mb-0">
+                            <div class="text-7xl">👨‍💻</div>
+                            <h3 class="font-bold text-2xl mt-4">오경택</h3>
+                            <p class="text-gray-500">Frontend Dev</p>
+                        </div>
+                        <div class="border-t-2 md:border-t-0 md:border-l-2 border-gray-200 pt-6 md:pt-0 md:pl-12">
+                            <p class="text-2xl font-display text-gray-800 leading-relaxed">"이론을 현실로 만들며 한 단계 성장할 수 있었습니다."</p>
+                            <p class="mt-4 text-gray-600 leading-relaxed">학교에서 배운 이론을 실제 프로젝트에 적용하며 많이 성장할 수 있었습니다. 특히 팀원들과의 협업을 통해 어려운 문제를 함께 해결해 나가는 과정에서 소통의 중요성을 깨달았습니다. 이번 경험은 미래의 개발자로서 나아갈 방향을 설정하는 데 큰 도움이 되었습니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- 최진수 -->
+                    <div class="md:flex items-start gap-12 reveal">
+                        <div class="flex-shrink-0 md:w-1/4 text-center md:text-left mb-6 md:mb-0">
+                            <div class="text-7xl">🕵️‍♂️</div>
+                            <h3 class="font-bold text-2xl mt-4">최진수</h3>
+                            <p class="text-gray-500">Data Analyst</p>
+                        </div>
+                        <div class="border-t-2 md:border-t-0 md:border-l-2 border-gray-200 pt-6 md:pt-0 md:pl-12">
+                            <p class="text-2xl font-display text-gray-800 leading-relaxed">"데이터 속에서 사용자의 마음을 읽는 과정이 흥미로웠습니다."</p>
+                            <p class="mt-4 text-gray-600 leading-relaxed">광고 캠페인을 통해 수집된 데이터를 분석하며 사용자의 마음을 읽고, 그것을 바탕으로 더 나은 방향을 제시하는 과정이 흥미로웠습니다. 우리의 분석이 CTR, CVR 같은 실제 성과로 이어지는 것을 보며 데이터의 힘을 다시 한번 느낄 수 있었습니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- 이지혜 -->
+                    <div class="md:flex items-start gap-12 reveal">
+                        <div class="flex-shrink-0 md:w-1/4 text-center md:text-left mb-6 md:mb-0">
+                            <div class="text-7xl">👩‍🎨</div>
+                            <h3 class="font-bold text-2xl mt-4">이지혜</h3>
+                            <p class="text-gray-500">Contents Planner</p>
+                        </div>
+                        <div class="border-t-2 md:border-t-0 md:border-l-2 border-gray-200 pt-6 md:pt-0 md:pl-12">
+                            <p class="text-2xl font-display text-gray-800 leading-relaxed">"상상 속 캐릭터에 생명을 불어넣는 즐거운 도전이었습니다."</p>
+                            <p class="mt-4 text-gray-600 leading-relaxed">딱딱한 농산물에 스토리를 입히고, 16가지의 개성 넘치는 캐릭터에 생명을 불어넣는 작업은 제게 큰 도전이자 즐거움이었습니다. 우리의 상상력이 사람들에게 새로운 재미를 주고, 지역을 알리는 데 기여할 수 있다는 사실이 정말 뿌듯합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 bg-black text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-display">Let's Talk!</h2>
+            <p class="mt-4 text-gray-400">의성의 다음 이야기를 함께 만들고 싶다면, 언제든 연락주세요.</p>
+            <div class="mt-8">
+                <a href="mailto:hello@beyondgarlic.com" class="bg-[var(--brand-yellow)] text-black font-bold py-3 px-8 rounded-full hover:brightness-110 transition-all duration-300">
+                    info@beyondgarlic.com
+                </a>
+            </div>
+            <div class="mt-12 text-sm text-gray-500">
+                <p>&copy; 2025 BEYOND GARLIC. A creative collective for Uiseong.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
