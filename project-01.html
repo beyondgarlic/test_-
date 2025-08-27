@@ -34,16 +34,6 @@
             transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1), transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
         .reveal.visible { opacity: 1; transform: translateY(0); }
-        
-        /* MBTI Test Styles */
-        .mbti-container .page {
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .mbti-container .hidden { display: none; }
     </style>
 </head>
 <body>
@@ -118,7 +108,7 @@
                     <p class="mt-4 text-lg max-w-2xl mx-auto text-gray-600 reveal" style="transition-delay: 0.1s;">'특산물 MBTI 테스트' 프로젝트를 통해 얻은 구체적인 성과입니다.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                     <div class="p-8 bg-white rounded-lg shadow-lg reveal" style="transition-delay: 0.3s;">
+                       <div class="p-8 bg-white rounded-lg shadow-lg reveal" style="transition-delay: 0.3s;">
                         <p class="text-5xl font-display text-[var(--brand-green)]">689+</p>
                         <h3 class="text-xl font-bold mt-4">콘텐츠 참여</h3>
                         <p class="mt-2 text-gray-500">689회 이상의 광고 조회수를 기록하며, <br> MZ세대의 이목을 끄는 데 성공했습니다.</p>
@@ -133,75 +123,8 @@
                         <h3 class="text-xl font-bold mt-4">전환율 (CVR)</h3>
                         <p class="mt-2 text-gray-500">테스트 참여자 중 17%가 추천 상품을 클릭하여, <br>높은 구매 의향을 확인할 수 있었습니다.</p>
                     </div>
-                
                 </div>
             </div>
-        </section>
-
-        <!-- MBTI Test Section -->
-<!--         <section class="py-20 md:py-32 bg-gray-50 flex flex-col justify-center items-center min-h-screen">
-            <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-4xl md:text-5xl font-display reveal">테스트 체험하기</h2>
-                 <p class="mt-4 text-lg max-w-2xl mx-auto text-gray-600 reveal" style="transition-delay: 0.1s;">당신과 어울리는 의성 특산물을 지금 바로 찾아보세요!</p>
-            </div> -->
-            
-            <!-- MBTI Test Component -->
-<!--             <div class="mbti-container mt-16 w-full">
-                <div id="main-page" class="page max-w-2xl mx-auto bg-white p-10 rounded-2xl shadow-lg">
-                <a href="https://beyondgarlic.github.io/mbti/mbti/" target="_blank" rel="noopener noreferrer">
-  <button id="start-btn" class="mt-8 bg-[var(--brand-green)] text-white font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-all">
-    테스트 시작하기
-  </button>
-</a>
-                <div id="test-page" class="page hidden max-w-2xl mx-auto bg-white p-10 rounded-2xl shadow-lg">
-                    <div id="progress-container" class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
-                        <div id="progress-bar" class="bg-[var(--brand-green)] h-2.5 rounded-full transition-all duration-300"></div>
-                    </div>
-                    <p id="progress-text" class="text-right text-sm text-gray-500 mb-8"></p>
-
-                    <h2 id="question" class="text-2xl font-bold mb-8 min-h-[64px]"></h2>
-                    <div class="options-container space-y-4">
-                        <button class="option-btn w-full text-left p-4 border rounded-lg hover:bg-gray-100 transition-colors" id="option-a"></button>
-                        <button class="option-btn w-full text-left p-4 border rounded-lg hover:bg-gray-100 transition-colors" id="option-b"></button>
-                    </div>
-                </div>
-
-                <div id="result-page" class="page hidden max-w-2xl mx-auto bg-white p-10 rounded-2xl shadow-lg">
-                    <h2 id="product-name" class="text-3xl font-bold font-display text-[var(--brand-green)]"></h2>
-                    <img id="product-img" src="" alt="추천 캐릭터 이미지" class="w-64 h-64 mx-auto my-6 rounded-full object-cover shadow-lg" />
-                    <p id="mbti-name" class="font-bold text-lg"></p>
-                    <p id="mbti-desc" class="mt-2 text-gray-600"></p>
-                    <div id="product-desc" class="hashtags mt-4 text-gray-500 font-bold"></div>
-                    
-                    <div class="w-full border-t my-8"></div>
-
-                    <h3 class="font-bold text-xl mb-4">이런 상품은 어때요?</h3>
-                    <div id="product-list" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
-
-                    <div class="w-full border-t my-8"></div>
-
-                    <div class="share-container">
-                        <div class="share-title font-bold mb-4">친구에게 공유하기</div>
-                        <div class="share-circle flex justify-center gap-4">
-                            <button id="share-native" class="circle-btn w-12 h-12 flex items-center justify-center rounded-full border-2 border-gray-200 hover:bg-gray-100 transition-all" title="공유하기">
-                                <img src="https://placehold.co/24x24/000000/FFFFFF?text=🔗" alt="공유" class="w-6 h-6">
-                            </button>
-                            <a id="share-twitter" class="circle-btn w-12 h-12 flex items-center justify-center rounded-full border-2 border-gray-200 hover:bg-gray-100 transition-all" title="트위터" target="_blank">
-                                <img src="https://placehold.co/24x24/000000/FFFFFF?text=X" alt="트위터" class="w-6 h-6">
-                            </a>
-                            <a id="share-facebook" class="circle-btn w-12 h-12 flex items-center justify-center rounded-full border-2 border-gray-200 hover:bg-gray-100 transition-all" title="페이스북" target="_blank">
-                                <img src="https://placehold.co/24x24/1877F2/FFFFFF?text=f" alt="페이스북" class="w-6 h-6">
-                            </a>
-                            <button id="share-kakao" class="circle-btn w-12 h-12 flex items-center justify-center rounded-full border-2 border-gray-200 hover:bg-gray-100 transition-all" title="카카오톡">
-                                <img src="https://placehold.co/24x24/FEE500/000000?text=K" alt="카카오톡" class="w-6 h-6">
-                            </button>
-                        </div>
-                    </div>
-
-                    <button id="restart-btn" class="mt-8 bg-gray-800 text-white font-bold py-3 px-8 rounded-full hover:bg-black transition-all">다시하기</button>
-                </div>
-            </div> -->
-            <!-- MBTI Test Component End -->
         </section>
     </main>
 
@@ -212,7 +135,7 @@
             <p class="mt-4 text-gray-400">의성의 다음 이야기를 함께 만들고 싶다면, 언제든 연락주세요.</p>
             <div class="mt-8">
                 <a href="mailto:hello@beyondgarlic.com" class="bg-[var(--brand-yellow)] text-black font-bold py-3 px-8 rounded-full hover:brightness-110 transition-all duration-300">
-                    info@beyondgarlic.com
+                    hello@beyondgarlic.com
                 </a>
             </div>
             <div class="mt-12 text-sm text-gray-500">
@@ -221,226 +144,7 @@
         </div>
     </footer>
 
-    <!-- Kakao SDK -->
-    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" crossorigin="anonymous"></script>
     <script>
-        if (Kakao.isInitialized()) {
-            Kakao.cleanup();
-        }
-        Kakao.init('9b771708b4454f04c4774684c6cfbe80');
-    </script>
-    
-    <!-- MBTI Test Script -->
-    <script>
-        // --- 1. DOM 요소 선택 ---
-        const mainPage = document.getElementById('main-page');
-        const testPage = document.getElementById('test-page');
-        const resultPage = document.getElementById('result-page');
-
-        const startBtn = document.getElementById('start-btn');
-        const restartBtn = document.getElementById('restart-btn');
-
-        const questionElem = document.getElementById('question');
-        const optionA = document.getElementById('option-a');
-        const optionB = document.getElementById('option-b');
-        const progressBar = document.getElementById('progress-bar');
-        const progressText = document.getElementById('progress-text');
-
-        const mbtiDescElem = document.getElementById('mbti-desc');
-        const mbtiNameElem = document.getElementById('mbti-name');
-        const productImgElem = document.getElementById('product-img');
-        const productNameElem = document.getElementById('product-name');
-        const productDescElem = document.getElementById('product-desc');
-
-        // --- 2. 데이터 정의 ---
-        // NOTE: 이미지 경로는 'images/...' 형태입니다. 'images' 폴더를 생성하고 그 안에 파일을 넣어주세요.
-        const questions = [
-            { type: 'E/I', question: '오픈톡 초대 알림 떴을 때 너의 리액션은?', options: ['A. "게임 시작~!" 바로 톡 폭주한 인싸 모드', 'B. "읽씹 좀 해야지..." 조용히 관망'] },
-            { type: 'E/I', question: '갑자기 주말 프리타임이 뙇!', options: ['A. “어디야? 5분 후 출발!” 즉흥 만남 찐사랑', 'B. “오늘은 집콕이 좋아…” 힐링은 나만의 리추얼'] },
-            { type: 'E/I', question: '단체사진 촬영 땐 어떻게?', options: ['A. "꼭 센터! 인생샷 각!" 포즈 연습 끝판왕', 'B. "슬쩍 구석에 숨어있기 쵝오" 자연미 뿜뿜'] },
-            { type: 'S/N', question: '신사업 아이디어 회의할 때', options: ['A. "데이터부터 보고 튼튼한 기반 다지는 게 먼저!" 현실파 분석가', 'B. “NFT 콜라보면 바이럴 대박 각인데?” 감각 충만 크리에이터 '] },
-            { type: 'S/N', question: '대세 앱 나왔다고?', options: ['A. 기능과 사용법을 꼼꼼히 익힘', 'B. 콘텐츠 제작 스팟! 기획부터 영상 아이디어 뿜뿜'] },
-            { type: 'S/N', question: '길거리 신상 맛집 찾았다면?', options: ['A. 재료·가격 꼼꼼히 따져보고 방문 찬찬히', 'B. 먹깨비 인증샷 각, 바로 스토리에 투척'] },
-            { type: 'T/F', question: '친구가 고민 풀고 싶다는데?', options: ['A. "논리적으로 풀자. 방법부터 정리!" 문제 해결사 모드', 'B. "너 맘 다 알아… 일단 위로부터" 따뜻이 공감하는 친구'] },
-            { type: 'T/F', question: '의견 다툼 생겼을 때?', options: ['A. 팩트와 논리로 깔끔 정리하는 싸움꾼', 'B. 분위기 살려주는 감성 중재자'] },
-            { type: 'T/F', question: '선택장애 걸린 순간', options: ['A. "장단점 비교차트"로 정답 찾기', 'B. 심장이 끌리는 "그 느낌"으로 바로 픽!'] },
-            { type: 'J/P', question: '여행짐 싸는 D-Day', options: ['A. "필수템 체크리스트" 미리 완벽 준비', 'B. 당일 아침 "필요한 건 현지에서 사자!" 즉흥파'] },
-            { type: 'J/P', question: '프로젝트 마감 앞두고', options: ['A. 미리미리 일찍 시작하는 알찬 전략가', 'B. 데드라인 직전, 몰아치기 고수'] },
-            { type: 'J/P', question: '약속 잡는 스타일은?', options: ['A. "캘린더 동기화 완료, 완벽한 일정 조율!" 계획파 ', 'B. "시간 장소? 당일 아침 잡는 게 쩌는 거 아니야?" 즉흥파'] }
-        ];
-
-        const results = {
-            'ENTJ': { mbtiDesc: '강인하고 카리스마 있는 리더. 겉은 단단하고 속은 깊어 조직의 맛을 책임지는 존재.', mbtiName: 'ENTJ', product: { name: "의성 마늘 : 마늘 장군 '갈릭킹'", image: 'images/ENTJ.png', desc: '#갈릭킹 #리더십 #의성마늘' }, relatedProducts: [ { title: "김장용 즙액가득 의성 깐마늘 1kg", price: "11,920원", image: 'images/garlic_product.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1631069478' }, { title: "[송이네농장]25년산 의성 토종 햇마늘 (특품) 3kg 4~4.5cm", price: "50,400원", image: 'images/garlic_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1583480970' }, { title: "[한톨] 토종 의성마늘 왕 3kg / 바로배송", price: "44,000원", image: 'images/garlic_prodcut3.png', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1730189645' }, { title: "[송이네농장] 25년산 의성 토종 햇마늘 (중품) 1kg 2.5~3cm", price: "15,200원", image: 'images/garlic_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1570800651' } ] },
-            'ENTP': { mbtiDesc: '재치 있고 논리적인 발명가. 틀에 박히지 않은 새로운 맛을 추구하며 도전적인 사람.', mbtiName: 'ENTP', product: { name: "의성 고추 :  핫한 아이디어 '핫페퍼'", image: 'images/ENTP.png', desc: '#핫페퍼 #혁신가 #아이디어뱅크' }, relatedProducts: [ { title: "[가을빛고운의성장마실] 사과고추장 1kg", price: "20,000원", image: 'images/pepper_product.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1599402597' }, { title: "[가을빛고운의성장마실] 사과+마늘고추장 각500g 총1kg 셋트 가로형", price: "20,000원", image: 'images/pepper_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1599403775' }, { title: "[빛고은] 2024년산 맛깔진 고춧가루 1kg / 화건고추 / HACCP ", price: "20,800원", image: 'images/pepper_product3.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1731295486' }, { title: "[의성마늘농사꾼] 2024년 국내산 건고추, 고춧가루 1근(600g)", price: "16,000원", image: 'images/pepper_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1723698601' } ] },
-            'ENFP': { mbtiDesc: '항상 에너지가 넘치고 밝은 매력으로 주변을 즐겁게 만든다. 달콤함으로 사람들의 마음을 사로잡는다.', mbtiName: 'ENFP', product: { name: "의성 자두 : 상큼 발랄 '플럼피'", image: 'images/ENFP.png', desc: '#플럼피 #상큼발랄 #에너지대장' }, relatedProducts: [ { title: "[샘골도담] 임신선물 의성 옥자두 1kg", price: "12,000원", image: 'images/jadu_product.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1752789891' }, { title: "[현산마을] 의성도담자두 2kg 24과 이내", price: "24,800원", image: 'images/jadu_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1718882552' }, { title: "[노을농원] 자두 상품 5kg 상등급", price: "40,000원", image: 'images/jadu_product3.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1688011269' }, { title: "[샘골도담] 임신선물 의성 옥자두 3kg", price: "28,000원", image: 'images/jadu_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1753108492' } ] },
-            'ENFJ': { mbtiDesc: '카리스마 넘치고 통찰력이 뛰어난 리더. 독특한 깊은 맛처럼 시간이 지날수록 진가가 드러나는 존재. ', mbtiName: 'ENFJ', product: { name: "의성 흑마늘 : 흑마늘 멘토 '블랙 가이'", image: 'images/ENFJ.png', desc: ' #블랙가이 #리더십 #깊은맛' }, relatedProducts: [ { title: "[신비안] 의성 깐흑마늘 (1통*200g)", price: "28,000원", image: 'images/blackgarlic_product.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1630416576' }, { title: "의성흑마늘 농축액 180g*2병", price: "68,000원", image: 'images/blackgarlic_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1570786852' }, { title: "의성흑마늘진액 (80ml*30) + 흑마환 (3개월분 150g*3병)", price: "128,000원", image: 'images/blackgarlic_product3.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1570785298' }, { title: "금쪽 흑마늘청 선물세트 (500ml*2병)", price: "30,400원", image: 'images/blackgarlic_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=511796' } ] },
-            'ESTJ': { mbtiDesc: '체계적이고 현실적인 계획가. 어떤 요리든 정확한 맛을 내는 데 꼭 필요한 존재.', mbtiName: 'ESTJ', product: { name: "의성 마늘 : 마늘 팀장 '미스터 갈릭'", image: 'images/ESTJ.png', desc: '#미스터갈릭 #계획왕 #파워풀' }, relatedProducts: [ { title: "김장용 즙액가득 의성 깐마늘 1kg", price: "11,920원", image: 'images/garlic_product.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1631069478' }, { title: "[송이네농장]25년산 의성 토종 햇마늘 (특품) 3kg 4~4.5cm", price: "50,400원", image: 'images/garlic_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1583480970' }, { title: "[한톨] 토종 의성마늘 왕 3kg / 바로배송", price: "44,000원", image: 'images/garlic_prodcut3.png', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1730189645' }, { title: "[송이네농장] 25년산 의성 토종 햇마늘 (중품) 1kg 2.5~3cm", price: "15,200원", image: 'images/garlic_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1570800651' } ] },
-            'ESFJ': { mbtiDesc: ' 따뜻하고 정이 넘치는 해결사. 사람들을 모아 즐거운 식사 자리를 만든다.', mbtiName: 'ESFJ', product: { name: "의성 쌀 : 밥 한 그릇 '라이시'", image: 'images/ESFJ.png', desc: '#라이시 #밥상의정 #사교만렙' }, relatedProducts: [ { title: "2024년 햅쌀 안계쌀 해맑은 청결미 5kg 당일도정", price: "15,600원", image: 'images/rice_product.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1623894546' }, { title: "[빅토리팜] 찰기좌르륵 의성명품햅쌀 백미(일품벼) 5kg", price: "16,800원", image: 'images/rice_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1570799711' }, { title: "[안계안성정미소] 2024년 햅쌀 맛있는 안계쌀 고향안계쌀 20kg(10kg 2포)", price: "53,440원", image: 'images/rice_product3.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1570795544' }, { title: "의성진쌀 영호진미 10kg 밥맛보장 당일도정 2024년 쌀", price: "27,200원", image: 'images/rice_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=512701' } ] },
-            'ESFP': { mbtiDesc: "유쾌하고 즉흥적인 분위기 메이커. 언제 어디서나 모두의 시선을 끄는 매력적인 스타.", mbtiName: "ESFP", product: { name: "의성 자두 : 춤추는 '자두몽'", image: "images/ESFP.png", desc: "#자두몽 #파티스타 #유쾌한리듬" }, relatedProducts: [ { title: "[샘골도담] 임신선물 의성 옥자두 1kg", price: "12,000원", image: 'images/jadu_product.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1752789891' }, { title: "[현산마을] 의성도담자두 2kg 24과 이내", price: "24,800원", image: 'images/jadu_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1718882552' }, { title: "[노을농원] 자두 상품 5kg 상등급", price: "40,000원", image: 'images/jadu_product3.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1688011269' }, { title: "[샘골도담] 임신선물 의성 옥자두 3kg", price: "28,000원", image: 'images/jadu_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1753108492' } ] },
-            'ESTP': { mbtiDesc: ' 뜨거운 열정을 지닌 모험가. 짜릿한 경험과 자극을 즐기며 새로운 도전을 두려워하지 않는다. ', mbtiName: 'ESTP', product: { name: "의성 고추 : 열정의 '페퍼맨'", image: 'images/ESTP.png', desc: '#페퍼맨 #열정가 #도전정신' }, relatedProducts: [ { title: "[가을빛고운의성장마실] 사과고추장 1kg", price: "20,000원", image: 'images/pepper_product.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1599402597' }, { title: "[가을빛고운의성장마실] 사과+마늘고추장 각500g 총1kg 셋트 가로형", price: "20,000원", image: 'images/pepper_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1599403775' }, { title: "[빛고은] 2024년산 맛깔진 고춧가루 1kg / 화건고추 / HACCP ", price: "20,800원", image: 'images/pepper_product3.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1731295486' }, { title: "[의성마늘농사꾼] 2024년 국내산 건고추, 고춧가루 1근(600g)", price: "16,000원", image: 'images/pepper_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1723698601' } ] },
-            'INTJ': { mbtiDesc: "깨끗하고 반듯한 모양처럼 정직하고 꼼꼼하다. 한 치의 오차도 없이 완벽한 맛을 만들어낸다.", mbtiName: "INTJ", product: { name: "의성 사과 : 원칙주의자 '애플 박사'", image: "images/INTJ.png", desc: "#애플박사 #전략가 #완벽주의자" }, relatedProducts: [ { title: "[의성토종마늘정보화마을] 2025년 햇사과 홍로 5kg(22-25과)", price: "33,600원", image: 'images/apple_product.png', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1724118757' }, { title: "[의성토종마늘정보화마을] 2025년 햇사과 아리수 5kg(14-17과)", price: "41,600원", image: 'images/apple_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1724115882' }, { title: "[의성토종마늘정보화마을] 초록사과 아오리 5kg (22-26과)", price: "28,000원", image: 'images/apple_product3.png', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1754273930' }, { title: "[의성토종마늘정보화마을] 2025년 햇사과 아리수 10kg(36-42과)", price: "61,600원", image: 'images/apple_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1724115649' }] },
-            'INTP': { mbtiDesc: "호기심 많고 지적인 탐구자. 복잡한 맛의 조합을 분석하고 새로운 맛의 가능성을 제시한다.", mbtiName: "INTP", product: { name: "의성 사과 : 사과 철학자 '애플로스'", image: "images/INTP.png", desc: "#애플로스 #논리쟁이 #사색가" }, relatedProducts: [ { title: "[의성토종마늘정보화마을] 2025년 햇사과 홍로 5kg(22-25과)", price: "33,600원", image: 'images/apple_product.png', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1724118757' }, { title: "[의성토종마늘정보화마을] 2025년 햇사과 아리수 5kg(14-17과)", price: "41,600원", image: 'images/apple_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1724115882' }, { title: "[의성토종마늘정보화마을] 초록사과 아오리 5kg (22-26과)", price: "28,000원", image: 'images/apple_product3.png', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1754273930' }, { title: "[의성토종마늘정보화마을] 2025년 햇사과 아리수 10kg(36-42과)", price: "61,600원", image: 'images/apple_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1724115649' }] },
-            'INFP': { mbtiDesc: "상상력이 풍부하고 따뜻한 감성가. 부드러운 단맛과 향으로 사람들의 마음을 위로한다.", mbtiName: "INFP", product: { name: "의성 자두 : 감성 가득 '플럼베리'", image: "images/INFP.png", desc: "#플럼베리 #감성힐러 #부드러운위로" }, relatedProducts: [ { title: "[샘골도담] 임신선물 의성 옥자두 1kg", price: "12,000원", image: 'images/jadu_product.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1752789891' }, { title: "[현산마을] 의성도담자두 2kg 24과 이내", price: "24,800원", image: 'images/jadu_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1718882552' }, { title: "[노을농원] 자두 상품 5kg 상등급", price: "40,000원", image: 'images/jadu_product3.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1688011269' }, { title: "[샘골도담] 임신선물 의성 옥자두 3kg", price: "28,000원", image: 'images/jadu_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1753108492' } ] },
-            'INFJ': { mbtiDesc: "신념이 확고하고 조용히 자신의 길을 가는 사색가. 깊은 맛과 향으로 사람들의 마음을 치유한다.", mbtiName: "INFJ", product: { name: "의성 쌀 : 명상하는 '밥도사'", image: "images/INFJ.png", desc: "#밥도사 #명상가 #마음치유" }, relatedProducts: [ { title: "2024년 햅쌀 안계쌀 해맑은 청결미 5kg 당일도정", price: "15,600원", image: 'images/rice_product.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1623894546' }, { title: "[빅토리팜] 찰기좌르륵 의성명품햅쌀 백미(일품벼) 5kg", price: "16,800원", image: 'images/rice_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1570799711' }, { title: "[안계안성정미소] 2024년 햅쌀 맛있는 안계쌀 고향안계쌀 20kg(10kg 2포)", price: "53,440원", image: 'images/rice_product3.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1570795544' }, { title: "의성진쌀 영호진미 10kg 밥맛보장 당일도정 2024년 쌀", price: "27,200원", image: 'images/rice_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=512701' } ] },
-            'ISTJ': { mbtiDesc: '원칙적이고 꼼꼼한 성격. 묵묵히 제 할 일을 완벽하게 해내는 견고한 존재.', mbtiName: 'ISTJ', product: { name: "의성 마늘 : 마늘 전문가 '닥터 스파이시'", image: 'images/ISTJ.png', desc: '#닥터스파이시 #꼼꼼플래너 #건강파트너' }, relatedProducts: [ { title: "김장용 즙액가득 의성 깐마늘 1kg", price: "11,920원", image: 'images/garlic_product.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1631069478' }, { title: "[송이네농장]25년산 의성 토종 햇마늘 (특품) 3kg 4~4.5cm", price: "50,400원", image: 'images/garlic_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1583480970' }, { title: "[한톨] 토종 의성마늘 왕 3kg / 바로배송", price: "44,000원", image: 'images/garlic_prodcut3.png', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1730189645' }, { title: "[송이네농장] 25년산 의성 토종 햇마늘 (중품) 1kg 2.5~3cm", price: "15,200원", image: 'images/garlic_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1570800651' } ] },
-            'ISFJ': { mbtiDesc: '차분하고 성실하며 모두의 일상에 없어서는 안 될 존재. 묵묵히 자리를 지키며 사람들에게 힘을 준다.', mbtiName: 'ISFJ', product: { name: "의성 쌀 : 든든한 '라이스맨'", image: 'images/ISFJ.png', desc: '#라이스맨 #든든한친구 #성실함' }, relatedProducts: [ { title: "2024년 햅쌀 안계쌀 해맑은 청결미 5kg 당일도정", price: "15,600원", image: 'images/rice_product.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1623894546' }, { title: "[빅토리팜] 찰기좌르륵 의성명품햅쌀 백미(일품벼) 5kg", price: "16,800원", image: 'images/rice_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1570799711' }, { title: "[안계안성정미소] 2024년 햅쌀 맛있는 안계쌀 고향안계쌀 20kg(10kg 2포)", price: "53,440원", image: 'images/rice_product3.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1570795544' }, { title: "의성진쌀 영호진미 10kg 밥맛보장 당일도정 2024년 쌀", price: "27,200원", image: 'images/rice_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=512701' } ] },
-            'ISFP': { mbtiDesc: '예술적 감각이 뛰어나고 자유분방한 영혼. 달콤하고 상쾌한 맛으로 삶에 즐거움을 더한다.', mbtiName: 'ISFP', product: { name: "의성 사과 : 자유로운 '애플 듀오'", image: 'images/ISFP.png', desc: '#애플듀오 #자유영혼 #예술감각' }, relatedProducts: [ { title: "[의성토종마늘정보화마을] 2025년 햇사과 홍로 5kg(22-25과)", price: "33,600원", image: 'images/apple_product.png', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1724118757' }, { title: "[의성토종마늘정보화마을] 2025년 햇사과 아리수 5kg(14-17과)", price: "41,600원", image: 'images/apple_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1724115882' }, { title: "[의성토종마늘정보화마을] 초록사과 아오리 5kg (22-26과)", price: "28,000원", image: 'images/apple_product3.png', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1754273930' }, { title: "[의성토종마늘정보화마을] 2025년 햇사과 아리수 10kg(36-42과)", price: "61,600원", image: 'images/apple_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1724115649' } ] },
-            'ISTP': { mbtiDesc: '조용하고 과묵하지만 뛰어난 관찰력으로 숨겨진 맛을 찾아내는 기술자.', mbtiName: 'ISTP', product: { name: "의성 고추 : 스파이시한 '고추 닌자'", image: 'images/ISTP.png', desc: '#고추닌자 #장인정신 #쿨매운맛' }, relatedProducts: [ { title: "[가을빛고운의성장마실] 사과고추장 1kg", price: "20,000원", image: 'images/pepper_product.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1599402597' }, { title: "[가을빛고운의성장마실] 사과+마늘고추장 각500g 총1kg 셋트 가로형", price: "20,000원", image: 'images/pepper_product2.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1599403775' }, { title: "[빛고은] 2024년산 맛깔진 고춧가루 1kg / 화건고추 / HACCP ", price: "20,800원", image: 'images/pepper_product3.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1731295486' }, { title: "[의성마늘농사꾼] 2024년 국내산 건고추, 고춧가루 1근(600g)", price: "16,000원", image: 'images/pepper_product4.jpg', link: 'https://esmall.cyso.co.kr/shop/item.php?it_id=1723698601' } ] }
-        };
-
-        // --- 3. 상태 변수 ---
-        let currentQuestionIndex = 0;
-        let score = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
-
-        // --- 4. 함수 정의 ---
-        function showPage(page) {
-            mainPage.classList.add('hidden');
-            testPage.classList.add('hidden');
-            resultPage.classList.add('hidden');
-            page.classList.remove('hidden');
-        }
-
-        function loadQuestion() {
-            if (currentQuestionIndex < questions.length) {
-                const q = questions[currentQuestionIndex];
-                questionElem.textContent = q.question;
-                optionA.textContent = q.options[0];
-                optionB.textContent = q.options[1];
-                updateProgress();
-            } else {
-                showResult();
-            }
-        }
-
-        function updateProgress() {
-            const total = questions.length;
-            const current = currentQuestionIndex + 1;
-            const percent = (current / total) * 100;
-            progressBar.style.width = percent + "%";
-            progressText.textContent = `${current} / ${total}`;
-        }
-
-        function handleAnswer(option) {
-            const q = questions[currentQuestionIndex];
-            const type1 = q.type.charAt(0);
-            const type2 = q.type.charAt(2);
-            score[option === 'A' ? type1 : type2]++;
-            currentQuestionIndex++;
-            loadQuestion();
-        }
-
-        function calculateMBTI() {
-            const ei = score.E > score.I ? 'E' : 'I';
-            const sn = score.S > score.N ? 'S' : 'N';
-            const tf = score.T > score.F ? 'T' : 'F';
-            const jp = score.J > score.P ? 'J' : 'P';
-            return ei + sn + tf + jp;
-        }
-
-        function showResult() {
-            const mbti = calculateMBTI();
-            const resultData = results[mbti] || results['ENTJ'];
-
-            productNameElem.textContent = resultData.product.name;
-            productImgElem.src = resultData.product.image;
-            mbtiDescElem.textContent = resultData.mbtiDesc;
-            mbtiNameElem.textContent = resultData.mbtiName;
-            productDescElem.textContent = resultData.product.desc;
-
-            const productListElem = document.getElementById('product-list');
-            productListElem.innerHTML = ""; 
-
-            resultData.relatedProducts.forEach(p => {
-                const a = document.createElement('a');
-                a.href = p.link;
-                a.target = "_blank";
-                a.className = "product-card flex flex-col items-center p-2 border rounded-lg text-center hover:shadow-md transition-shadow";
-                a.innerHTML = `<img src="${p.image}" alt="${p.title}" class="w-full h-24 object-cover rounded-md mb-2">
-                    <div class="product-info">
-                        <h3 class="text-xs font-bold">${p.title}</h3>
-                        <p class="text-xs text-gray-600">${p.price}</p>
-                    </div>`;
-                productListElem.appendChild(a);
-            });
-
-            const url = new URL(window.location.href);
-            url.searchParams.set('mbti', mbti);
-            window.history.replaceState(null, '', url.toString());
-
-            showPage(resultPage);
-        }
-
-        function resetTest() {
-            currentQuestionIndex = 0;
-            score = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
-            progressBar.style.width = "0%";
-            progressText.textContent = "";
-            showPage(mainPage);
-        }
-
-        // --- 5. 이벤트 리스너 ---
-        startBtn.addEventListener('click', () => {
-            showPage(testPage);
-            loadQuestion();
-        });
-
-        optionA.addEventListener('click', () => handleAnswer('A'));
-        optionB.addEventListener('click', () => handleAnswer('B'));
-        restartBtn.addEventListener('click', resetTest);
-
-        document.addEventListener('DOMContentLoaded', () => {
-            showPage(mainPage);
-        });
-
-        // ===== 공유 기능 =====
-        function getShareData() {
-            const title = document.getElementById('product-name')?.textContent || '의성 특산품 MBTI';
-            const text = document.getElementById('mbti-desc')?.textContent || '나의 MBTI로 의성 특산품을 추천받아보세요!';
-            const url = window.location.href;
-            return { title, text, url };
-        }
-
-        document.getElementById('share-native')?.addEventListener('click', async () => {
-            const data = getShareData();
-            if (navigator.share) {
-                try { 
-                    await navigator.share(data); 
-                } catch (e) { 
-                    console.log('Share was cancelled.', e); 
-                }
-            } else {
-                alert('이 브라우저에서는 공유 기능을 지원하지 않습니다.');
-            }
-        });
-
-        function updateShareLinks() {
-            const { text, url } = getShareData();
-            const twitter = document.getElementById('share-twitter');
-            if(twitter) twitter.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
-            
-            const facebook = document.getElementById('share-facebook');
-            if(facebook) facebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-        }
-        
-        document.addEventListener('DOMContentLoaded', updateShareLinks);
-           
-        const kakaoBtn = document.getElementById('share-kakao');
-        kakaoBtn?.addEventListener('click', () => {
-            const { title, text, url } = getShareData();
-            const imageUrl = document.getElementById('product-img')?.src || 'https://beyondgarlic.github.io/garlicmbti/images/BeyondGarlic.png';
-            
-            Kakao.Share.sendDefault({
-                objectType: 'feed',
-                content: {
-                    title: title,
-                    description: text,
-                    imageUrl: imageUrl,
-                    link: { mobileWebUrl: url, webUrl: url }
-                },
-                buttons: [ { title: '결과 보기', link: { mobileWebUrl: url, webUrl: url } } ]
-            });
-        });
-        
         // Reveal on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
